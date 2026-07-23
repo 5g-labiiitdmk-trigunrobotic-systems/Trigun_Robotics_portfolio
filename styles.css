@@ -251,13 +251,12 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
 .hero-scrim {
   position: absolute;
   inset: 0;
-  /* Middle stop at 0.48 — up from the original 0.35 (real footage runs
-     darker than the placeholder did, so the sub-headline needs some
-     lift) but pulled back from an earlier 0.58 that read as too washed
-     out / "fady". The sub-headline's own text-shadow halo covers the
-     rest of the legibility gap. */
+  /* Middle stop at 0.36 — pulled down further from 0.48 so the video
+     reads clearly rather than washed out; close to the video's own
+     tone. The sub-headline's text-shadow halo (below) carries most of
+     the remaining legibility work at this lower opacity. */
   background:
-    linear-gradient(180deg, rgba(247, 248, 250, 0.85) 0%, rgba(247, 248, 250, 0.48) 45%, rgba(247, 248, 250, 0.9) 100%);
+    linear-gradient(180deg, rgba(247, 248, 250, 0.85) 0%, rgba(247, 248, 250, 0.36) 45%, rgba(247, 248, 250, 0.9) 100%);
 }
 
 .hero-content {
@@ -300,8 +299,9 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
   margin: 0 auto 2.4rem;
   /* Soft light halo, not a shadow — the only hero text without its own
      pill/glass background, so it needs help separating from footage
-     the scrim alone can't fully lift in the darkest passages. */
-  text-shadow: 0 0 10px rgba(247, 248, 250, 0.8), 0 0 22px rgba(247, 248, 250, 0.5);
+     the scrim alone can't fully lift in the darkest passages. Slightly
+     stronger than before to compensate for the lower scrim opacity. */
+  text-shadow: 0 0 10px rgba(247, 248, 250, 0.9), 0 0 24px rgba(247, 248, 250, 0.7);
 }
 
 .hero-ctas {
