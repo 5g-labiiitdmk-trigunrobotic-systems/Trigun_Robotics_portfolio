@@ -172,39 +172,40 @@ const trainingTracks = [
     num: "01",
     title: "Drone Technology",
     items: [
-      "Flight Dynamics & Control Systems",
-      "Payload Integration & Mission Planning",
-      "Regulatory Compliance (DGCA, NPNT)",
-      "Drone-as-a-Service",
+      { label: "Flight Dynamics & Control Systems", desc: "Covers aerodynamics, propulsion, and autonomous flight algorithms." },
+      { label: "Payload Integration & Mission Planning", desc: "Training on sensor mounting, agricultural spraying, surveillance, and logistics." },
+      { label: "Regulatory Compliance", desc: "DGCA norms, NPNT protocols, and airspace safety procedures." },
+      { label: "Drone-as-a-Service (DaaS)", desc: "Operational training for SHGs, startups, and field technicians." },
     ],
   },
   {
     num: "02",
     title: "Navigation Systems",
     items: [
-      "RF-Based Indoor Navigation",
-      "GPS & GNSS Modules",
-      "SLAM & Path Planning",
-      "AR Integration",
+      { label: "RF-Based Indoor Navigation", desc: "Signal triangulation, beacon mapping, and sensor fusion." },
+      { label: "GPS & GNSS Modules", desc: "Real-time tracking, route optimization, and geofencing." },
+      { label: "SLAM & Path Planning", desc: "Algorithms like A*, Dijkstra, and RRT for autonomous mobility." },
+      { label: "AR Integration", desc: "Visual overlays for immersive indoor guidance and spatial awareness." },
     ],
   },
   {
     num: "03",
     title: "Robotics",
     items: [
-      "Embedded Systems & Actuation",
-      "ROS",
-      "AI for Robotics",
-      "Field Robotics",
+      { label: "Embedded Systems & Actuation", desc: "Microcontroller programming, motor control, and sensor interfacing." },
+      { label: "ROS (Robot Operating System)", desc: "Simulation, control loops, and multi-agent coordination." },
+      { label: "AI for Robotics", desc: "Object recognition, decision-making, and adaptive behavior." },
+      { label: "Field Robotics", desc: "Agricultural RoVs, underwater drones, and anti-drone systems." },
     ],
   },
   {
     num: "04",
     title: "Customization & Delivery",
-    items: [
-      "Academic Programs",
-      "Government Programs",
-      "Industrial Partner Programs",
+    intro: "Programs are modular, scalable, and customized to suit:",
+    subitems: [
+      { label: "Academic institutions", desc: "labs, faculty development, student workshops" },
+      { label: "Government bodies", desc: "skill development, smart city integration" },
+      { label: "Industrial partners", desc: "deployment training, maintenance protocols" },
     ],
   },
 ];
@@ -446,6 +447,21 @@ document.addEventListener("keydown", (e) => {
 
 /* ---------- Training accordion ---------- */
 
+function renderTrackContent(t) {
+  if (t.intro) {
+    // Track 04: an intro line followed by a nested sub-list.
+    return `
+      <p class="acc-intro">${t.intro}</p>
+      <ul class="acc-list acc-sublist">
+        ${t.subitems.map((s) => `<li><strong>${s.label}</strong> (${s.desc})</li>`).join("")}
+      </ul>`;
+  }
+  return `
+    <ul class="acc-list">
+      ${t.items.map((s) => `<li><strong>${s.label}:</strong> ${s.desc}</li>`).join("")}
+    </ul>`;
+}
+
 const accEl = document.getElementById("accordion");
 accEl.innerHTML = trainingTracks
   .map(
@@ -458,7 +474,7 @@ accEl.innerHTML = trainingTracks
     </button>
     <div class="acc-panel" id="acc-panel-${i}">
       <div class="acc-panel-inner">
-        ${t.items.map((s) => `<span class="sub-pill">${s}</span>`).join("")}
+        ${renderTrackContent(t)}
       </div>
     </div>
   </div>`
