@@ -13,7 +13,7 @@
      TWITTER_URL      — X / Twitter profile link
 
    ...plus, inside each object of the `products` array:
-     image — card thumbnail / modal image (jpg)
+     image — card thumbnail / modal image (png)
      video — optional hover-loop mp4 (null = static image only)
 
    ...and (referenced from styles.css, not here):
@@ -36,98 +36,98 @@ const products = [
     title: "Smart Health Drones",
     category: "Drones",
     description: "Smart drones for healthcare management, emergency response, and medical logistics.",
-    image: "assets/products/smart-health-drones.jpg",
+    image: "assets/products/smart-health-drones.png",
     video: null,
   },
   {
     title: "AI Based Yoga Application",
     category: "Wellness",
     description: "Real-time posture correction and personalized routines for yoga practice.",
-    image: "assets/products/ai-yoga.jpg",
+    image: "assets/products/ai-yoga.png",
     video: null,
   },
   {
     title: "Advanced Anti-Drone System",
     category: "Defense",
     description: "Military-grade protection against unauthorized UAVs with 360° radar coverage.",
-    image: "assets/products/anti-drone.jpg",
+    image: "assets/products/anti-drone.png",
     video: null,
   },
   {
     title: "AR Indoor Navigation System",
     category: "Navigation",
     description: "AR-enhanced navigation with centimeter-accurate positioning for healthcare, industrial, and retail.",
-    image: "assets/products/ar-indoor-nav.jpg",
+    image: "assets/products/ar-indoor-nav.png",
     video: null,
   },
   {
     title: "Autonomous Underwater Drone",
     category: "Drones",
     description: "Advanced underwater vehicle for infrastructure inspection, environmental monitoring, and search & rescue.",
-    image: "assets/products/underwater-drone.jpg",
+    image: "assets/products/underwater-drone.png",
     video: null,
   },
   {
     title: "Precision Agriculture Drone",
     category: "Agriculture",
     description: "AI-enabled drones for crop monitoring, smart spraying, and soil analysis.",
-    image: "assets/products/agri-drone.jpg",
+    image: "assets/products/agri-drone.png",
     video: null,
   },
   {
     title: "AI Based Gym Trainer",
     category: "Fitness",
     description: "Personalized workout plans and real-time form correction using AI vision.",
-    image: "assets/products/ai-gym.jpg",
+    image: "assets/products/ai-gym.png",
     video: null,
   },
   {
     title: "AI-Powered Drones for Smart Cities",
     category: "Drones",
     description: "Autonomous drones for urban management, emergency response, and medical logistics.",
-    image: "assets/products/smart-city-drones.jpg",
+    image: "assets/products/smart-city-drones.png",
     video: null,
   },
   {
     title: "Wireless ROV System",
     category: "Navigation",
     description: "Remotely Operated Vehicle with GNSS-denied navigation for industrial, scientific, and defense applications.",
-    image: "assets/products/rov-system.jpg",
+    image: "assets/products/rov-system.png",
     video: null,
   },
   {
     title: "Augmented Reality in Healthcare",
     category: "Healthcare",
     description: "Enhancing medical diagnostics and procedural guidance with AR Doctor applications.",
-    image: "assets/products/ar-healthcare.jpg",
+    image: "assets/products/ar-healthcare.png",
     video: null,
   },
   {
     title: "IoT Applications",
     category: "IoT",
     description: "Visionary IoT solutions for Healthcare, Agriculture, Academics, and Industry.",
-    image: "assets/products/iot-applications.jpg",
+    image: "assets/products/iot-applications.png",
     video: null,
   },
   {
     title: "AR-based Aircraft Maintenance System",
     category: "Maintenance",
     description: "Augmented Reality solutions for guided aircraft inspection, repair, and training, enhancing efficiency and safety.",
-    image: "assets/products/ar-aircraft-maintenance.jpg",
+    image: "assets/products/ar-aircraft-maintenance.png",
     video: null,
   },
   {
     title: "Eagle Eye AI Surveillance System",
     category: "IoT",
     description: "Intelligent multi-camera AI surveillance platform for real-time detection, recognition, and analytics.",
-    image: "assets/products/eagle-eye.jpg",
+    image: "assets/products/eagle-eye.png",
     video: null,
   },
   {
     title: "Current — Secure Messenger",
     category: "IoT",
     description: "End-to-end encrypted messenger with zero server-side storage, voice/video calling, and full data privacy by design.",
-    image: "assets/products/current-messenger.jpg",
+    image: "assets/products/current-messenger.png",
     video: null,
   },
 ];
