@@ -488,6 +488,7 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  align-items: start;
 }
 
 .product-card {
@@ -507,17 +508,21 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
 
 .product-media {
   position: relative;
-  aspect-ratio: 3 / 2;
   overflow: hidden;
   background: var(--band);
 }
-.product-media img,
+.product-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
 .product-media video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   transition: opacity 0.45s ease, transform 0.45s ease;
 }
 .product-media video { opacity: 0; }
