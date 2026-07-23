@@ -9,7 +9,6 @@
      HERO_VIDEO_SRC   — hero background loop (mp4)
      HERO_POSTER_SRC  — hero video poster frame (jpg/png)
      ABOUT_VIDEO_SRC  — about-section loop (mp4, optional)
-     GOOGLE_FORM_URL  — inquiry Google Form link
      LINKEDIN_URL     — LinkedIn profile link
      TWITTER_URL      — X / Twitter profile link
 
@@ -26,7 +25,7 @@ const LOGO_SRC = "assets/logo.png";
 const HERO_VIDEO_SRC = "assets/hero.mp4";
 const HERO_POSTER_SRC = "assets/hero-poster.jpg";
 const ABOUT_VIDEO_SRC = "assets/about.mp4";
-const GOOGLE_FORM_URL = "https://forms.google.com/placeholder"; // TODO: real Google Form
+const GOOGLE_FORM_URL = "https://forms.gle/roAWfBpsm5H1n7Wj8";
 const LINKEDIN_URL = "#"; // TODO: real LinkedIn URL
 const TWITTER_URL = "#"; // TODO: real X/Twitter URL
 
@@ -149,19 +148,19 @@ const pillars = [
     icon: ICON('<path d="M12 3v4M3 12h4M17 12h4M12 17v4"/><circle cx="12" cy="12" r="3.5"/><circle cx="5" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/>'),
   },
   {
-    text: "Anti-drone defense systems",
+    text: "Anti-drone defense systems for security and defense",
     icon: ICON('<path d="M12 3 4 6.5v5c0 4.6 3.4 8.4 8 9.5 4.6-1.1 8-4.9 8-9.5v-5L12 3Z"/><path d="m9 12 2 2 4-4"/>'),
   },
   {
-    text: "Precision agriculture UAVs",
+    text: "Precision agriculture UAVs for crop management and analytics",
     icon: ICON('<path d="M12 21c4-2.5 7-6.5 7-11a7 7 0 0 0-14 0c0 4.5 3 8.5 7 11Z"/><path d="M12 8v6M9.5 10.5 12 13l2.5-2.5"/>'),
   },
   {
-    text: "Autonomous underwater vehicles for GNSS-denied environments",
+    text: "Autonomous underwater vehicles (ROVs) for GNSS-denied environments",
     icon: ICON('<path d="M2 15c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0"/><path d="M2 19c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0"/><ellipse cx="12" cy="8" rx="6" ry="3.5"/><path d="M18 8h3"/>'),
   },
   {
-    text: "AR-based indoor navigation systems",
+    text: "AR-based indoor navigation systems for complex facilities",
     icon: ICON('<path d="M3 7V4h3M21 7V4h-3M3 17v3h3M21 17v3h-3"/><path d="m12 8 4 2.3v4.4L12 17l-4-2.3v-4.4L12 8Z"/>'),
   },
 ];

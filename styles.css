@@ -382,7 +382,15 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
   margin-bottom: 3.5rem;
 }
 
-.about-text p { color: var(--muted); font-size: 1.02rem; max-width: 56ch; }
+.about-text p { color: var(--muted); font-size: 1.02rem; max-width: 56ch; margin-bottom: 1.2rem; }
+
+.about-intro {
+  color: var(--ink-2);
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.6;
+  max-width: 52ch;
+}
 
 .about-media video {
   width: 100%;
@@ -391,6 +399,14 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
   border-radius: var(--radius);
   border: 1px solid var(--hairline);
   box-shadow: var(--shadow);
+}
+
+.about-closing {
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 780px;
+  margin: 0 auto 3rem;
+  text-align: center;
 }
 
 .pillars {
