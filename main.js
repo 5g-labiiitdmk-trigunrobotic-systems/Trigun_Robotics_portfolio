@@ -16,6 +16,10 @@
    ...plus, inside each object of the `products` array:
      image — card thumbnail / modal image (jpg)
      video — optional hover-loop mp4 (null = static image only)
+
+   ...and (referenced from styles.css, not here):
+     assets/fonts/Flaviotte-Regular.woff2 / .otf — placeholder
+     files; replace with the real licensed font before going live.
    ============================================================ */
 
 const LOGO_SRC = "assets/logo.png";
@@ -210,6 +214,51 @@ const trainingTracks = [
    Wiring
    ============================================================ */
 
+/* ---------- Motion stack (GSAP + ScrollTrigger + Lenis via CDN) ----------
+   Every library is optional: if a CDN script fails to load, the site
+   falls back to the IntersectionObserver / CSS-transition code paths
+   below and stays fully visible and functional. Users with
+   prefers-reduced-motion get instant, animation-free rendering. */
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const hasGsap = typeof window.gsap !== "undefined" && typeof window.ScrollTrigger !== "undefined";
+const hasLenis = typeof window.Lenis !== "undefined";
+const motionOn = hasGsap && !prefersReducedMotion;
+
+if (motionOn) {
+  gsap.registerPlugin(ScrollTrigger);
+  document.documentElement.classList.add("gsap-motion");
+}
+
+let lenis = null;
+if (hasLenis && !prefersReducedMotion) {
+  lenis = new Lenis();
+  if (motionOn) {
+    // Keep ScrollTrigger in lockstep with Lenis, and drive Lenis's RAF
+    // through gsap.ticker so both share one clock (no drift/jank).
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add((time) => lenis.raf(time * 1000));
+    gsap.ticker.lagSmoothing(0);
+  } else {
+    const raf = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
+  }
+  // Route same-page anchor clicks through Lenis (native smooth-scroll is
+  // disabled while Lenis owns the scroll).
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest('a[href^="#"]');
+    if (!link || link.getAttribute("href").length < 2) return;
+    const target = document.querySelector(link.getAttribute("href"));
+    if (target) {
+      e.preventDefault();
+      lenis.scrollTo(target, { offset: -70 });
+    }
+  });
+}
+
 /* ---------- Asset constants → DOM ---------- */
 
 document.getElementById("nav-logo").src = LOGO_SRC;
@@ -299,6 +348,8 @@ chipsEl.addEventListener("click", (e) => {
   gridEl.querySelectorAll(".product-card").forEach((card) => {
     card.classList.toggle("filter-hide", filter !== "All" && card.dataset.category !== filter);
   });
+  // grid height changed — reposition scroll triggers
+  if (motionOn) ScrollTrigger.refresh();
 });
 
 /* ---------- Product card hover video crossfade ---------- */
@@ -336,6 +387,7 @@ function openModal(card) {
 
   backdrop.hidden = false;
   document.body.style.overflow = "hidden";
+  if (lenis) lenis.stop();
 
   // Animate from the clicked card's position: start the modal transformed
   // to overlap the card, then release to identity on the next frame.
@@ -366,6 +418,7 @@ function closeModal() {
   setTimeout(() => {
     backdrop.hidden = true;
     document.body.style.overflow = "";
+    if (lenis) lenis.start();
     modal.style.transform = "";
     modal.style.opacity = "";
   }, 300);
@@ -413,6 +466,34 @@ accEl.innerHTML = trainingTracks
   )
   .join("");
 
+function collapseItem(item) {
+  item.classList.remove("open");
+  item.querySelector(".acc-header").setAttribute("aria-expanded", "false");
+  const panel = item.querySelector(".acc-panel");
+  if (motionOn) {
+    gsap.to(panel, { height: 0, duration: 0.45, ease: "power2.inOut" });
+  } else {
+    panel.style.maxHeight = "";
+  }
+}
+
+function expandItem(item) {
+  item.classList.add("open");
+  item.querySelector(".acc-header").setAttribute("aria-expanded", "true");
+  const panel = item.querySelector(".acc-panel");
+  if (motionOn) {
+    gsap.to(panel, {
+      height: "auto",
+      duration: 0.5,
+      ease: "power2.inOut",
+      // panels change the page height — reposition scroll triggers after
+      onComplete: () => ScrollTrigger.refresh(),
+    });
+  } else {
+    panel.style.maxHeight = panel.scrollHeight + "px";
+  }
+}
+
 accEl.addEventListener("click", (e) => {
   const header = e.target.closest(".acc-header");
   if (!header) return;
@@ -420,18 +501,8 @@ accEl.addEventListener("click", (e) => {
   const wasOpen = item.classList.contains("open");
 
   // only one open at a time
-  accEl.querySelectorAll(".acc-item.open").forEach((it) => {
-    it.classList.remove("open");
-    it.querySelector(".acc-header").setAttribute("aria-expanded", "false");
-    it.querySelector(".acc-panel").style.maxHeight = "";
-  });
-
-  if (!wasOpen) {
-    item.classList.add("open");
-    header.setAttribute("aria-expanded", "true");
-    const panel = item.querySelector(".acc-panel");
-    panel.style.maxHeight = panel.scrollHeight + "px";
-  }
+  accEl.querySelectorAll(".acc-item.open").forEach(collapseItem);
+  if (!wasOpen) expandItem(item);
 });
 
 /* ---------- Footer: product links + social icons ---------- */
@@ -462,49 +533,121 @@ document.getElementById("footer-social").innerHTML = SOCIAL_LINKS.map(
   (s) => `<a href="${s.href}" aria-label="${s.label}" ${s.href.startsWith("http") ? 'target="_blank" rel="noopener"' : ""}>${s.icon}</a>`
 ).join("");
 
-/* ---------- Scroll reveal ---------- */
-
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("revealed");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
-
-document.querySelectorAll("[data-reveal]").forEach((el, i) => {
-  el.style.setProperty("--reveal-delay", `${(i % 6) * 0.08}s`);
-  revealObserver.observe(el);
-});
-
-/* ---------- Stats count-up ---------- */
-
-function countUp(el, target, duration = 1400) {
-  const start = performance.now();
-  const tick = (now) => {
-    const t = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - t, 3); // cubic ease-out
-    el.textContent = Math.round(eased * target);
-    if (t < 1) requestAnimationFrame(tick);
-  };
-  requestAnimationFrame(tick);
-}
+/* ---------- Scroll reveal + stats count-up ---------- */
 
 const statsCard = document.querySelector(".stats-card");
-const statsObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.querySelectorAll("[data-count]").forEach((el) => {
-        countUp(el, Number(el.dataset.count));
-      });
-      statsObserver.unobserve(entry.target);
+
+if (prefersReducedMotion) {
+  // No animation: show everything, set final stat values immediately.
+  document.querySelectorAll("[data-reveal]").forEach((el) => el.classList.add("revealed"));
+  statsCard.querySelectorAll("[data-count]").forEach((el) => {
+    el.textContent = el.dataset.count;
+  });
+} else if (motionOn) {
+  // GSAP + ScrollTrigger path.
+  // Sibling groups animate as one staggered sequence; everything else
+  // gets its own trigger.
+  const staggerGroups = ["#pillars", "#product-grid", "#accordion"];
+  const grouped = new Set();
+
+  staggerGroups.forEach((sel) => {
+    const parent = document.querySelector(sel);
+    const items = Array.from(parent.children);
+    items.forEach((el) => grouped.add(el));
+    gsap.fromTo(
+      items,
+      { opacity: 0, y: 26 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.7,
+        ease: "power3.out",
+        stagger: 0.08,
+        scrollTrigger: { trigger: parent, start: "top 85%" },
+      }
+    );
+  });
+
+  // Stat items stagger inside the glass card.
+  gsap.fromTo(
+    statsCard.querySelectorAll(".stat"),
+    { opacity: 0, y: 26 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 0.7,
+      ease: "power3.out",
+      stagger: 0.1,
+      scrollTrigger: { trigger: statsCard, start: "top 88%" },
+    }
+  );
+
+  document.querySelectorAll("[data-reveal]").forEach((el) => {
+    if (grouped.has(el)) return;
+    gsap.fromTo(
+      el,
+      { opacity: 0, y: 26 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.7,
+        ease: "power3.out",
+        scrollTrigger: { trigger: el, start: "top 88%" },
+      }
+    );
+  });
+
+  // Count-up via GSAP number tweening (snap keeps values integral).
+  statsCard.querySelectorAll("[data-count]").forEach((el) => {
+    gsap.to(el, {
+      textContent: Number(el.dataset.count),
+      duration: 1.4,
+      ease: "power3.out",
+      snap: { textContent: 1 },
+      scrollTrigger: { trigger: statsCard, start: "top 88%", once: true },
     });
-  },
-  { threshold: 0.4 }
-);
-statsObserver.observe(statsCard);
+  });
+} else {
+  // Fallback path: IntersectionObserver + CSS transitions (CDN failed).
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
+
+  document.querySelectorAll("[data-reveal]").forEach((el, i) => {
+    el.style.setProperty("--reveal-delay", `${(i % 6) * 0.08}s`);
+    revealObserver.observe(el);
+  });
+
+  const countUp = (el, target, duration = 1400) => {
+    const start = performance.now();
+    const tick = (now) => {
+      const t = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - t, 3); // cubic ease-out
+      el.textContent = Math.round(eased * target);
+      if (t < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  const statsObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.querySelectorAll("[data-count]").forEach((el) => {
+          countUp(el, Number(el.dataset.count));
+        });
+        statsObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.4 }
+  );
+  statsObserver.observe(statsCard);
+}
