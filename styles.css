@@ -251,10 +251,16 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
 .hero-scrim {
   position: absolute;
   inset: 0;
-  /* Neutralized — the video should show through with no fading or
-     tinting. Element kept in the markup/CSS rather than removed, in
-     case a future pass wants a wash back; it currently renders nothing. */
-  background: transparent;
+  /* Soft fade concentrated over the text band only (roughly where the
+     badge through the CTAs sit) — fully transparent at the very top
+     and bottom of the hero, peaking at 0.22 opacity in the middle so
+     the video stays clearly visible everywhere, not washed out. */
+  background:
+    linear-gradient(180deg,
+      rgba(247, 248, 250, 0) 0%,
+      rgba(247, 248, 250, 0.22) 30%,
+      rgba(247, 248, 250, 0.22) 68%,
+      rgba(247, 248, 250, 0) 100%);
 }
 
 .hero-content {
@@ -281,15 +287,18 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
 
 .hero h1 {
   font-size: clamp(2.3rem, 5.6vw, 4.1rem);
+  font-weight: 700;
   letter-spacing: -0.02em;
   margin-bottom: 1.4rem;
-  /* No background panel, no glow — the video stays visible right up
-     to the letterforms. Just a low-key drop shadow for separation. */
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  color: #141C27;
+  /* No text-shadow, no glow — legibility comes purely from font-weight,
+     solid opaque color, and the .hero-scrim fade behind it. */
 }
 
 /* Accent font applies ONLY to the hero H1 highlight phrase —
-   Space Grotesk stays the heading font everywhere else. */
+   Space Grotesk stays the heading font everywhere else. The blue
+   accent color is an intentional highlight, left as-is: only the
+   base headline text was asked to go solid navy. */
 .hero h1 .accent { font-family: var(--font-accent); }
 
 .hero-sub {
@@ -298,10 +307,8 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
   color: var(--muted);
   max-width: 620px;
   margin: 0 auto 2.4rem;
-  /* Stronger than the headline's — lighter-weight, smaller, muted-grey
-     text needs more help than large bold navy does, but this is still
-     a single low-key drop shadow, not a glow: dark, offset, no halo. */
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55), 0 2px 14px rgba(0, 0, 0, 0.45);
+  /* No text-shadow, matching the headline — the scrim fade above now
+     carries this text's contrast instead. */
 }
 
 .hero-ctas {
