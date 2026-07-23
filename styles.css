@@ -283,40 +283,25 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
   font-size: clamp(2.3rem, 5.6vw, 4.1rem);
   letter-spacing: -0.02em;
   margin-bottom: 1.4rem;
-  /* No text-shadow — clean, sharp edges. Legibility against the video
-     is now handled by .hero-text-panel's background, not a glow. */
+  /* No background panel, no glow — the video stays visible right up
+     to the letterforms. Just a low-key drop shadow for separation. */
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
 }
 
 /* Accent font applies ONLY to the hero H1 highlight phrase —
    Space Grotesk stays the heading font everywhere else. */
 .hero h1 .accent { font-family: var(--font-accent); }
 
-/* Tightly-fitted glass panel behind the headline + sub-headline only —
-   the badge and CTA buttons already carry their own glass/solid
-   backgrounds, so they don't need this. Matches the site's existing
-   glassmorphism language (see .hero-badge, .btn-glass) but at higher
-   opacity, since this needs to guarantee legibility on its own rather
-   than just read as a decorative pill. This is the fallback the video
-   overlay used to provide — now scoped to just the text, not the
-   whole hero. */
-.hero-text-panel {
-  background: rgba(247, 248, 250, 0.9);
-  -webkit-backdrop-filter: blur(18px);
-  backdrop-filter: blur(18px);
-  border: 1px solid var(--hairline);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-lift);
-  padding: 2.2rem 2.6rem;
-  margin-bottom: 1.6rem;
-}
-
 .hero-sub {
   font-size: clamp(1rem, 1.6vw, 1.2rem);
   font-weight: 300;
   color: var(--muted);
   max-width: 620px;
-  margin: 0 auto;
-  /* No text-shadow — the panel background above handles legibility. */
+  margin: 0 auto 2.4rem;
+  /* Stronger than the headline's — lighter-weight, smaller, muted-grey
+     text needs more help than large bold navy does, but this is still
+     a single low-key drop shadow, not a glow: dark, offset, no halo. */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55), 0 2px 14px rgba(0, 0, 0, 0.45);
 }
 
 .hero-ctas {
@@ -858,8 +843,6 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
 
 @media (max-width: 768px) {
   section { padding: 4.5rem 0; }
-
-  .hero-text-panel { padding: 1.6rem 1.4rem; }
 
   .nav-links {
     position: fixed;
