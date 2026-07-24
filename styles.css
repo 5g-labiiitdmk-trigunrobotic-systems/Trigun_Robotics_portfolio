@@ -569,10 +569,18 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-y: contain;
+  /* Native single-finger vertical pan/swipe must reach this element —
+     don't let a parent's touch-action rule block it. */
+  touch-action: pan-y;
+  /* Scroll works via native browser scroll; the scrollbar track itself
+     is just hidden for a cleaner look (Firefox / IE-Edge legacy). */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   padding: 1.2rem;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
+.modal-backdrop::-webkit-scrollbar { display: none; }
 .modal-backdrop[hidden] { display: none; }
 .modal-backdrop.open { opacity: 1; }
 
