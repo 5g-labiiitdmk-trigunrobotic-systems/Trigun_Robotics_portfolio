@@ -919,10 +919,8 @@ function openModal(card) {
     `<div class="modal-contact-cta">
       <a href="#contact" class="btn btn-fill modal-contact-link">Contact for more details</a>
     </div>`;
-  modalDesc.scrollTop = 0;
-  modal.scrollTop = 0;
-
   backdrop.hidden = false;
+  backdrop.scrollTop = 0;
   document.body.style.overflow = "hidden";
   if (lenis) lenis.stop();
 

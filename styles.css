@@ -560,8 +560,15 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
   -webkit-backdrop-filter: blur(6px);
   backdrop-filter: blur(6px);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* The backdrop itself is the only scroll container — it fills the
+     whole viewport, so scrolling it reads as native page scroll while
+     the modal is open (body scroll is suppressed by main.js). No
+     separate fixed-height/internal-scroll box inside the modal. */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: contain;
   padding: 1.2rem;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -574,10 +581,22 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
   border-radius: 24px;
   box-shadow: 0 30px 80px rgba(20, 28, 39, 0.25);
   width: min(680px, 100%);
-  max-height: 88vh;
-  overflow-y: auto;
+  /* Auto vertical margins inside a column-flex scroll container center
+     short content and collapse to 0 for tall content, so the backdrop
+     stays scrollable to the very top instead of clipping it. */
+  margin: auto 0;
   position: relative;
   transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease;
+}
+
+/* Zero-height sticky wrapper: keeps the close button pinned to the top
+   of the viewport as the backdrop scrolls, without reserving layout
+   space (the button still visually overlaps the media like before). */
+.modal-sticky-bar {
+  position: sticky;
+  top: 0;
+  height: 0;
+  z-index: 5;
 }
 
 .modal-close {
@@ -600,6 +619,10 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
 }
 .modal-close:hover { transform: rotate(90deg); }
 
+.modal-media {
+  overflow: hidden;
+  border-radius: 24px 24px 0 0;
+}
 .modal-media img {
   width: 100%;
   aspect-ratio: 16 / 9;
