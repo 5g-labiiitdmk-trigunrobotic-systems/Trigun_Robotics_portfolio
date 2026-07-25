@@ -661,6 +661,118 @@ const products = [
     image: "assets/products/current-messenger.png",
     video: null,
   },
+  {
+    title: "MeghDut",
+    category: "Drones",
+    description: "AI-driven drone booking platform for on-demand aerial delivery, real-time fleet tracking, and automated mission control.",
+    detail: `
+      <h4 class="modal-detail-title">MeghDut: Autonomous Drone Booking &amp; Delivery Platform</h4>
+      <p>In the modern logistics and emergency response landscape, efficiency, speed, and real-time coordination are paramount. Traditional delivery networks and ground-based logistics often face insurmountable challenges&mdash;from traffic congestion in urban centers to infrastructure gaps in rural and remote regions&mdash;resulting in delayed critical deliveries and inefficient resource utilization.</p>
+      <p>To solve this, MEGHADUT has developed a state-of-the-art AI-driven drone booking platform. Integrating an intelligent mission engine, real-time spatial awareness, and a robust pilot ecosystem, MeghDut bridges the gap between those who need rapid aerial transport and the certified drone fleet ready to serve them. This innovation transforms how we approach aerial logistics, smart delivery, and automated flight execution.</p>
+      <h5 class="modal-subhead">System Overview: The MeghDut Platform</h5>
+      <p>The MeghDut drone platform is a comprehensive aerial logistics solution engineered to provide seamless end-to-end mission execution:</p>
+      <h5 class="modal-subhead">📦 Smart On-Demand Drone Delivery</h5>
+      <ul>
+        <li>Functions as an intelligent dispatch system, calculating dynamic quotes and identifying optimal launch and landing zones.</li>
+        <li>Provides automated pathfinding using PostGIS and Turf.js to route drones around restricted airspaces and complex geographies.</li>
+        <li>Ensures safe, autonomous transport of packages, medical supplies, and sensitive cargo.</li>
+      </ul>
+      <h5 class="modal-subhead">📡 Real-Time Telemetry &amp; Fleet Management</h5>
+      <ul>
+        <li>Delivers sub-second telemetry updates via UDP and WebSockets for live map tracking.</li>
+        <li>Enables central monitoring of fleet health, battery levels, speed, and positioning.</li>
+        <li>Integrates Digital Twin technology to accurately represent active drones in the cloud.</li>
+      </ul>
+      <h5 class="modal-subhead">🤖 AI-Assisted Mission Control (AeroMind)</h5>
+      <ul>
+        <li>Incorporates an AI conversational assistant (AeroMind) to help pilots and operators quickly retrieve mission protocols and safety standards.</li>
+        <li>Evaluates live weather conditions via integrations to approve, caution, or ground missions automatically based on environmental safety thresholds.</li>
+      </ul>
+      <h5 class="modal-subhead">📞 Integrated Voice &amp; Video Communication</h5>
+      <ul>
+        <li>Facilitates live WebRTC video monitoring and voice communication between pilots, customers, and operations control using ZegoCloud.</li>
+        <li>Provides immediate on-the-ground context and visual confirmation during the critical delivery phases.</li>
+      </ul>
+      <h5 class="modal-subhead">🔒 Enterprise-Grade Security &amp; Validation</h5>
+      <ul>
+        <li>Protects every flight with rigorous path traversal checks, JWT-based role authorization, and hardware-level authentication keys.</li>
+        <li>Validates pilot ownership and mission states to ensure only authorized operators can launch or alter flight paths.</li>
+      </ul>
+    `,
+    image: "assets/products/meghadut-drone.png",
+    video: null,
+  },
+  {
+    title: "Mahik-Fitness",
+    category: "Fitness",
+    description: "AI-powered fitness platform delivering real-time pose correction, rep tracking, and multilingual coaching across 30+ exercises.",
+    detail: `
+      <h4 class="modal-detail-title">Mahik Fitness: Intelligent Pose Guidance</h4>
+      <p>The AI-Based Gym Trainer is an advanced fitness solution that uses computer vision, machine learning, and real-time feedback to help users perform exercises with perfect form. By leveraging pose estimation algorithms (like MediaPipe or OpenPose), this system analyzes joint positions, body alignment, and movement to ensure safe and effective workouts.</p>
+      <h5 class="modal-subhead">🔑 Core Features</h5>
+      <ul>
+        <li><strong>Real-Time Pose Detection:</strong> Tracks 33+ body landmarks with high accuracy.</li>
+        <li><strong>Voice &amp; Visual Guidance:</strong> Provides immediate audio and visual cues to correct form.</li>
+        <li><strong>Repetition Counting:</strong> Automatically counts reps and sets.</li>
+        <li><strong>Injury Prevention:</strong> Alerts users when unsafe posture or movement patterns are detected.</li>
+        <li><strong>Progress Tracking:</strong> Logs performance data over time for personalized improvements.</li>
+        <li><strong>Multi-Language Support:</strong> Offers guidance in Telugu, Hindi, and English.</li>
+      </ul>
+      <h5 class="modal-subhead">📊 At a Glance</h5>
+      <p>30+ exercises across the full workout library. 6 training categories, from cardio to suspension work. 12 languages supported for spoken coaching.</p>
+      <h5 class="modal-subhead">🎯 Difficulty Levels</h5>
+      <p>Every exercise can be practiced at three accuracy thresholds, so the same movement adapts to the user&rsquo;s experience level instead of demanding perfect form from day one.</p>
+      <ul>
+        <li><strong>Beginner:</strong> 60% form-accuracy threshold.</li>
+        <li><strong>Intermediate:</strong> 70% form-accuracy threshold.</li>
+        <li><strong>Advanced:</strong> 90% form-accuracy threshold.</li>
+      </ul>
+      <h5 class="modal-subhead">🏋️ Workout Categories</h5>
+      <p>Cardiovascular, Strength training, Flexibility &amp; balance, Bodyweight, Functional training, Suspension training</p>
+      <h5 class="modal-subhead">😃 Motivational Stages</h5>
+      <p>Animated on-screen rewards grow with the user&rsquo;s rep count, moving through progressively higher tiers from resting all the way up to champion and legendary status, keeping sessions engaging rather than purely clinical.</p>
+      <h5 class="modal-subhead">📅 Attendance Calendar</h5>
+      <p>A built-in monthly calendar lets members mark attendance on any past date, showing attended versus missed days at a glance so consistency is easy to track over time.</p>
+      <h5 class="modal-subhead">⏱️ Rest &amp; Break System</h5>
+      <p>Automatic timed breaks run between exercises, with a voice announcement of the next movement and a visual countdown so users always know what&rsquo;s coming next without checking a screen.</p>
+      <h5 class="modal-subhead">🏆 Session History</h5>
+      <p>Every session is logged automatically &mdash; date, accuracy score, reps completed, and duration &mdash; all viewable later so users and trainers can see improvement over time.</p>
+      <h5 class="modal-subhead">🧑‍💼 Admin Dashboard (For Gym Owners)</h5>
+      <p>Gym owners and trainers get a management console to approve new member accounts, track performance data across all users, and handle reported issues through a Kanban-style board.</p>
+      <h5 class="modal-subhead">🌐 Language Support</h5>
+      <p>Spoken coaching, exercise names, and break announcements are available in twelve languages: English, Hindi, Telugu, Tamil, Marathi, Malayalam, Kannada, Bengali, Gujarati, Konkani, Punjabi, Odia.</p>
+      <h5 class="modal-subhead">Exercise-Specific Guidance</h5>
+      <ul>
+        <li><strong>Push-Up:</strong> Maintain a straight body line from head to heels, elbows at ~45&deg; angle. AI detects hip sagging or elevated hips; monitors elbow extension range.</li>
+        <li><strong>Planking:</strong> Spine alignment, neutral neck, and core engagement. AI warns if hips are too high or low; suggests adjustments for shoulder position.</li>
+        <li><strong>Dumbbell Bent-Over Row:</strong> Flat back, hinge at hips, controlled arm movement. AI checks torso angle (~45&deg;), detects shoulder rounding, monitors elbow trajectory.</li>
+        <li><strong>Pull-Up:</strong> Full extension at the bottom, chin over bar at the top. AI detects swinging, improper grip, or incomplete range of motion.</li>
+        <li><strong>Overhead Press:</strong> Bar path close to body, neutral spine, locked-out elbows. AI alerts if lower back arches excessively; monitors elbow lockout.</li>
+        <li><strong>Shoulder Press:</strong> Shoulders down and back, wrists aligned over elbows. AI highlights shoulder elevation issues and asymmetry in movement.</li>
+        <li><strong>Dumbbell Wrist Curl:</strong> Controlled wrist flexion/extension, elbows steady. AI tracks wrist angle and rep tempo; warns if movement is jerky.</li>
+        <li><strong>Cable Curl:</strong> Upper arms stationary, controlled curl motion. AI detects swinging elbows and improper tension control.</li>
+        <li><strong>Dumbbell Chest Press:</strong> Neutral wrists, elbows at 75&deg;&ndash;90&deg;, full chest engagement. AI monitors bar path symmetry and wrist stability.</li>
+        <li><strong>Pec Deck:</strong> Squeeze chest at contraction, elbows slightly bent. AI tracks range of motion and shoulder joint stress.</li>
+        <li><strong>Calf Raise:</strong> Full plantar flexion, controlled lowering. AI monitors balance and range of ankle motion.</li>
+        <li><strong>Calf Jump:</strong> Explosive concentric phase with controlled landing. AI detects landing mechanics, knee alignment, and jump height.</li>
+      </ul>
+      <h5 class="modal-subhead">🧠 Technology Stack</h5>
+      <p>Pose Estimation: TensorFlow Lite, MediaPipe Pose. Voice Guidance: Google Cloud TTS, Azure Cognitive Services. Mobile/Desktop Support: Flutter for cross-platform apps, React for dashboards. Wearable Integration: Smartwatches for HR &amp; calorie tracking. Cloud Backend: Firebase or AWS for data sync and analytics.</p>
+      <h5 class="modal-subhead">📈 Benefits</h5>
+      <p>Reduces injury risk by correcting form in real-time. Encourages self-paced learning with instant feedback. Enhances accessibility with multi-language voice guidance. Tracks progress for both casual users and professional athletes. Makes personalized coaching affordable and scalable.</p>
+      <h5 class="modal-subhead">👥 Designed and Developed By</h5>
+      <p>This platform was built at the IIITDM Kurnool campus under Trigun Robotic Systems Private Limited, with a focus on making quality, AI-guided fitness coaching accessible to everyone.</p>
+      <ul>
+        <li>Dr. K. Krishna Naik &mdash; Project Mentor, Electronics &amp; Communication Engineering, IIITDM Kurnool.</li>
+        <li>V. Mahisree &mdash; Developer &amp; Designer, Electronics &amp; Communication Engineering, JNTUA College of Engineering, Anantapur.</li>
+      </ul>
+      <h5 class="modal-subhead">⚠️ Disclaimer</h5>
+      <p>The AI-Based Gym Trainer application is intended for informational and fitness guidance purposes only. While it uses advanced computer vision and AI algorithms to provide pose correction, performance analysis, and exercise suggestions, it is not a substitute for professional medical or fitness advice.</p>
+      <p>Users are advised to consult a certified fitness trainer or healthcare provider before beginning any exercise program, especially if they have prior injuries or medical conditions. The app provides guidance based on camera-based pose detection, which may be subject to environmental factors (lighting, camera placement, clothing) and therefore should not be relied on as the sole source of exercise safety. Trigun Robotic Systems Pvt. Ltd. and its affiliates are not responsible for injuries, accidents, or health issues arising from misuse of the application or incorrect implementation of exercise instructions. The app should be used as a supportive fitness tool and not as a certified medical or rehabilitation device. By using this application, users acknowledge and accept that they are engaging in exercise activities at their own risk.</p>
+    `,
+    image: "assets/products/Mahik-fitness.png",
+    video: null,
+  },
 ];
 
 const FILTER_CATEGORIES = [
