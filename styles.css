@@ -183,11 +183,29 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
   color: var(--ink);
 }
 .nav-brand img { width: 36px; height: 36px; border-radius: 10px; object-fit: contain; }
+
+/* Site wordmark: Mulish, all caps, solid ink color — deliberately plain
+   so it reads clearly against the nav instead of blending in like the
+   surrounding body/nav-link text. No shadow, glow, or outline effects. */
+.nav-wordmark {
+  font-family: var(--font-head);
+  font-size: 1.32rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-shadow: none;
+  -webkit-text-stroke: 0;
+  background: none;
+}
 .nav-brand em {
   font-style: normal;
-  font-weight: 700;
-  color: var(--ink-2);
+  font-weight: 800;
+  color: var(--ink);
   margin-left: 0.35rem;
+  text-shadow: none;
+  -webkit-text-stroke: 0;
+  background: none;
 }
 
 .nav-links {
