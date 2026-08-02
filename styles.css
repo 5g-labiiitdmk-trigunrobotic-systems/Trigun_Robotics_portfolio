@@ -184,12 +184,16 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
 }
 .nav-brand img { width: 36px; height: 36px; border-radius: 10px; object-fit: contain; }
 
-/* Site wordmark: Mulish, all caps, solid ink color — deliberately plain
-   so it reads clearly against the nav instead of blending in like the
-   surrounding body/nav-link text. No shadow, glow, or outline effects. */
+/* Site wordmark: all caps, solid ink color, sized to match the logo —
+   deliberately plain so it reads clearly against the nav instead of
+   blending in like the surrounding body/nav-link text. No shadow,
+   glow, or outline effects. */
 .nav-wordmark {
   font-family: var(--font-head);
-  font-size: 1.32rem;
+  /* Matches the 36px logo at rest; scales down fluidly on narrower
+     viewports so the full all-caps text always fits on one line next
+     to the logo and the nav-links/toggle button without overlapping. */
+  font-size: clamp(14px, 4.6vw, 36px);
   font-weight: 800;
   letter-spacing: 0.01em;
   text-transform: uppercase;
@@ -197,6 +201,7 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
   text-shadow: none;
   -webkit-text-stroke: 0;
   background: none;
+  white-space: nowrap;
 }
 .nav-brand em {
   font-style: normal;
@@ -1042,6 +1047,19 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
+/* Tablet band: the toggle button is hidden and the full nav-links row
+   is back in flow (below the 768px slide-in-menu breakpoint), so the
+   36px wordmark needs to shrink further here to avoid overlapping the
+   links — most acutely right after the 768px breakpoint, where the
+   nav-links row is at its narrowest before the container has room to
+   grow. */
+@media (min-width: 769px) and (max-width: 899px) {
+  .nav-wordmark { font-size: 15px; }
+}
+@media (min-width: 900px) and (max-width: 1079px) {
+  .nav-wordmark { font-size: 22px; }
+}
+
 @media (max-width: 768px) {
   section { padding: 4.5rem 0; }
 
@@ -1077,7 +1095,6 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
   .product-grid { grid-template-columns: 1fr; }
   .pillars { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
-  .nav-brand em { display: none; }
 }
 
 /* ---------- Reduced motion ---------- */
