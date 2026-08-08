@@ -1,0 +1,92 @@
+commit 9b08c8613fae316d8d4667ea2c890aec784f2b21
+Author: Claude <noreply@anthropic.com>
+Date:   Fri Aug 7 18:09:27 2026 +0000
+
+    Fix Meghadut spelling, restyle CTA to Experience, revert wordmark to Space Grotesk
+    
+    - Corrected "MeghDut" to "Meghadut" everywhere it's displayed (card
+      title, modal title, body copy, image alt text) — image filename
+      left as-is since renaming assets isn't needed.
+    - Renamed the "Visit Website" button to "Experience" and switched it
+      from the glass/outline button style to the solid accent-fill style
+      (already used elsewhere for primary CTAs) across all three products
+      that have it: Meghadut, Mahik-Fitness, Samik.
+    - Nav wordmark now uses Space Grotesk (the site's existing heading
+      font) instead of Playfair Display, with a bold/muted weight split
+      (700 for "Trigun", 500 for "Robotic Systems") and tighter
+      letter-spacing. Re-verified no overlap with the nav links/toggle
+      button across 27 widths from 320px to 1440px.
+
+diff --git a/main.js b/main.js
+index adbccb3..e940350 100644
+--- a/main.js
++++ b/main.js
+@@ -662,16 +662,16 @@ const products = [
+     video: null,
+   },
+   {
+-    title: "MeghDut",
++    title: "Meghadut",
+     category: "Drones",
+     description: "AI-driven drone booking platform for on-demand aerial delivery, real-time fleet tracking, and automated mission control.",
+     website: "https://meghadut.com/",
+     detail: `
+-      <h4 class="modal-detail-title">MeghDut: Autonomous Drone Booking &amp; Delivery Platform</h4>
++      <h4 class="modal-detail-title">Meghadut: Autonomous Drone Booking &amp; Delivery Platform</h4>
+       <p>In the modern logistics and emergency response landscape, efficiency, speed, and real-time coordination are paramount. Traditional delivery networks and ground-based logistics often face insurmountable challenges&mdash;from traffic congestion in urban centers to infrastructure gaps in rural and remote regions&mdash;resulting in delayed critical deliveries and inefficient resource utilization.</p>
+-      <p>To solve this, MEGHADUT has developed a state-of-the-art AI-driven drone booking platform. Integrating an intelligent mission engine, real-time spatial awareness, and a robust pilot ecosystem, MeghDut bridges the gap between those who need rapid aerial transport and the certified drone fleet ready to serve them. This innovation transforms how we approach aerial logistics, smart delivery, and automated flight execution.</p>
+-      <h5 class="modal-subhead">System Overview: The MeghDut Platform</h5>
+-      <p>The MeghDut drone platform is a comprehensive aerial logistics solution engineered to provide seamless end-to-end mission execution:</p>
++      <p>To solve this, MEGHADUT has developed a state-of-the-art AI-driven drone booking platform. Integrating an intelligent mission engine, real-time spatial awareness, and a robust pilot ecosystem, Meghadut bridges the gap between those who need rapid aerial transport and the certified drone fleet ready to serve them. This innovation transforms how we approach aerial logistics, smart delivery, and automated flight execution.</p>
++      <h5 class="modal-subhead">System Overview: The Meghadut Platform</h5>
++      <p>The Meghadut drone platform is a comprehensive aerial logistics solution engineered to provide seamless end-to-end mission execution:</p>
+       <h5 class="modal-subhead">Smart On-Demand Drone Delivery</h5>
+       <ul>
+         <li>Functions as an intelligent dispatch system, calculating dynamic quotes and identifying optimal launch and landing zones.</li>
+@@ -1051,7 +1051,7 @@ function openModal(card) {
+   modalDesc.innerHTML =
+     (p.website
+       ? `<div class="modal-website-cta">
+-          <a href="${p.website}" target="_blank" rel="noopener" class="btn btn-glass">Visit Website</a>
++          <a href="${p.website}" target="_blank" rel="noopener" class="btn btn-fill">Experience</a>
+         </div>`
+       : "") +
+     (p.detail && p.detail.trim() ? p.detail : `<p>${p.description}</p>`) +
+diff --git a/styles.css b/styles.css
+index 08dc3ec..865b5b0 100644
+--- a/styles.css
++++ b/styles.css
+@@ -189,19 +189,15 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
+    blending in like the surrounding body/nav-link text. No shadow,
+    glow, or outline effects. */
+ .nav-wordmark {
+-  /* Flaviotte was requested here, but its font files in the repo are
+-     broken placeholder stubs (fail to parse, fall back to plain
+-     serif) and the real typeface requires a paid commercial license
+-     for business use. Playfair Display is a free, open-license (SIL
+-     OFL) elegant high-contrast serif used as a substitute — reads
+-     much better than the body/heading sans at this large a size. */
+-  font-family: 'Playfair Display', serif;
++  /* Space Grotesk — the site's existing heading font, matching the
++     rest of the page instead of a separate accent typeface. */
++  font-family: 'Space Grotesk', sans-serif;
+   /* Matches the 36px logo at rest; scales down fluidly on narrower
+      viewports so the full all-caps text always fits on one line next
+      to the logo and the nav-links/toggle button without overlapping. */
+   font-size: clamp(13px, 4.5vw, 36px);
+-  font-weight: 800;
+-  letter-spacing: 0.01em;
++  font-weight: 700;
++  letter-spacing: -0.02em;
+   text-transform: uppercase;
+   color: var(--ink);
+   text-shadow: none;
+@@ -211,7 +207,7 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
+ }
+ .nav-brand em {
+   font-style: normal;
+-  font-weight: 800;
++  font-weight: 500;
+   color: var(--ink);
+   margin-left: 0.35rem;
+   text-shadow: none;

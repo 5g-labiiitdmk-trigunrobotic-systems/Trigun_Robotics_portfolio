@@ -189,19 +189,15 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
    blending in like the surrounding body/nav-link text. No shadow,
    glow, or outline effects. */
 .nav-wordmark {
-  /* Flaviotte was requested here, but its font files in the repo are
-     broken placeholder stubs (fail to parse, fall back to plain
-     serif) and the real typeface requires a paid commercial license
-     for business use. Playfair Display is a free, open-license (SIL
-     OFL) elegant high-contrast serif used as a substitute — reads
-     much better than the body/heading sans at this large a size. */
-  font-family: 'Playfair Display', serif;
+  /* Space Grotesk — the site's existing heading font, matching the
+     rest of the page instead of a separate accent typeface. */
+  font-family: 'Space Grotesk', sans-serif;
   /* Matches the 36px logo at rest; scales down fluidly on narrower
      viewports so the full all-caps text always fits on one line next
      to the logo and the nav-links/toggle button without overlapping. */
   font-size: clamp(13px, 4.5vw, 36px);
-  font-weight: 800;
-  letter-spacing: 0.01em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   color: var(--ink);
   text-shadow: none;
@@ -211,7 +207,7 @@ html.lenis, html.lenis-smooth { scroll-behavior: auto; }
 }
 .nav-brand em {
   font-style: normal;
-  font-weight: 800;
+  font-weight: 500;
   color: var(--ink);
   margin-left: 0.35rem;
   text-shadow: none;

@@ -662,16 +662,16 @@ const products = [
     video: null,
   },
   {
-    title: "MeghDut",
+    title: "Meghadut",
     category: "Drones",
     description: "AI-driven drone booking platform for on-demand aerial delivery, real-time fleet tracking, and automated mission control.",
     website: "https://meghadut.com/",
     detail: `
-      <h4 class="modal-detail-title">MeghDut: Autonomous Drone Booking &amp; Delivery Platform</h4>
+      <h4 class="modal-detail-title">Meghadut: Autonomous Drone Booking &amp; Delivery Platform</h4>
       <p>In the modern logistics and emergency response landscape, efficiency, speed, and real-time coordination are paramount. Traditional delivery networks and ground-based logistics often face insurmountable challenges&mdash;from traffic congestion in urban centers to infrastructure gaps in rural and remote regions&mdash;resulting in delayed critical deliveries and inefficient resource utilization.</p>
-      <p>To solve this, MEGHADUT has developed a state-of-the-art AI-driven drone booking platform. Integrating an intelligent mission engine, real-time spatial awareness, and a robust pilot ecosystem, MeghDut bridges the gap between those who need rapid aerial transport and the certified drone fleet ready to serve them. This innovation transforms how we approach aerial logistics, smart delivery, and automated flight execution.</p>
-      <h5 class="modal-subhead">System Overview: The MeghDut Platform</h5>
-      <p>The MeghDut drone platform is a comprehensive aerial logistics solution engineered to provide seamless end-to-end mission execution:</p>
+      <p>To solve this, MEGHADUT has developed a state-of-the-art AI-driven drone booking platform. Integrating an intelligent mission engine, real-time spatial awareness, and a robust pilot ecosystem, Meghadut bridges the gap between those who need rapid aerial transport and the certified drone fleet ready to serve them. This innovation transforms how we approach aerial logistics, smart delivery, and automated flight execution.</p>
+      <h5 class="modal-subhead">System Overview: The Meghadut Platform</h5>
+      <p>The Meghadut drone platform is a comprehensive aerial logistics solution engineered to provide seamless end-to-end mission execution:</p>
       <h5 class="modal-subhead">Smart On-Demand Drone Delivery</h5>
       <ul>
         <li>Functions as an intelligent dispatch system, calculating dynamic quotes and identifying optimal launch and landing zones.</li>
@@ -1051,7 +1051,7 @@ function openModal(card) {
   modalDesc.innerHTML =
     (p.website
       ? `<div class="modal-website-cta">
-          <a href="${p.website}" target="_blank" rel="noopener" class="btn btn-glass">Visit Website</a>
+          <a href="${p.website}" target="_blank" rel="noopener" class="btn btn-fill">Experience</a>
         </div>`
       : "") +
     (p.detail && p.detail.trim() ? p.detail : `<p>${p.description}</p>`) +
