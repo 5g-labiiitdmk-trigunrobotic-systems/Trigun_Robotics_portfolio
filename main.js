@@ -37,37 +37,38 @@ const products = [
     category: "Drones",
     description: "Smart drones for healthcare management, emergency response, and medical logistics.",
     detail: `
-      <h4 class="modal-detail-title">Drone based Emergency Medical System</h4>
-      <p>In emergency healthcare, the &ldquo;golden hour&rdquo; is a critical window where timely intervention can drastically reduce mortality and long-term complications. However, in rural and underserved regions, systemic delays&mdash;such as limited ambulance access, shortage of medical personnel, and lack of real-time coordination&mdash;continue to hinder effective response.</p>
+      <h4 class="modal-detail-title">Smart Health Drones</h4>
+      <p>In emergency healthcare, the “golden hour” is a critical window where timely intervention can drastically reduce mortality and long-term complications. However, in rural and underserved regions, systemic delays—such as limited ambulance access, shortage of medical personnel, and lack of real-time coordination—continue to hinder effective response.</p>
       <p>To address these challenges, Trigun Robotic Systems Private Limited, incubated at IIITDM Kurnool, has developed a drone-based emergency medical support system that integrates ambulance patrolling, public announcement, and telemedicine capabilities into a unified aerial platform. This innovation is designed to bridge healthcare gaps, enhance public communication, and support civic infrastructure in both urban and rural settings.</p>
       <h5 class="modal-subhead">System Overview: DRUVA Platform</h5>
       <p>The DRUVA drone system is a multipurpose aerial solution engineered to deliver four critical public services:</p>
       <ul>
-        <li>Ambulance Patrolling System
-          <ul>
-            <li>Functions as an aerial scout to establish green corridors for ambulances.</li>
-            <li>Provides live traffic surveillance and route optimization to reduce response times.</li>
-            <li>Enhances coordination between emergency services and traffic authorities.</li>
-            <li>Delivers multilingual voice broadcasts across large and remote areas.</li>
-            <li>Supports emergency alerts, public health advisories, and event coordination.</li>
-            <li>Enables rapid delivery of medicines and first-aid kits to inaccessible zones.</li>
-            <li>Facilitates live video monitoring and remote consultation with medical professionals.</li>
-            <li>Supports tele-prescription and on-site triage guidance for immediate care.</li>
-            <li>Offers real-time surveillance, anomaly detection, and infrastructure assessment.</li>
-            <li>Bridges gaps in municipal reporting and enhances civic decision-making.</li>
-            <li>Integrates with local governance systems for data-driven emergency response.</li>
-          </ul>
-        </li>
+      <li>Ambulance Patrolling System<ul>
+      <li>Functions as an aerial scout to establish green corridors for ambulances.</li>
+      <li>Provides live traffic surveillance and route optimization to reduce response times.</li>
+      <li>Enhances coordination between emergency services and traffic authorities.</li>
+      <li>Delivers multilingual voice broadcasts across large and remote areas.</li>
+      <li>Supports emergency alerts, public health advisories, and event coordination.</li>
+      <li>Enables rapid delivery of medicines and first-aid kits to inaccessible zones.</li>
+      <li>Facilitates live video monitoring and remote consultation with medical professionals.</li>
+      <li>Supports tele-prescription and on-site triage guidance for immediate care.</li>
+      <li>Offers real-time surveillance, anomaly detection, and infrastructure assessment.</li>
+      <li>Bridges gaps in municipal reporting and enhances civic decision-making.</li>
+      <li>Integrates with local governance systems for data-driven emergency response.</li>
+      </ul></li>
       </ul>
     `,
     image: "assets/products/smart-health-drones.png",
     video: null,
+    website: "https://trigun-smart-health-drone.onrender.com",
+    buttonLabel: "Experience",
   },
   {
     title: "AI Based Yoga Application",
     category: "Wellness",
     description: "Real-time posture correction and personalized routines for yoga practice.",
     detail: `
+
       <h4 class="modal-detail-title">AI Based Yoga Application</h4>
       <p>Trigun Robotic Systems Private Limited has successfully developed an AI-based Yoga Application, which was prominently featured during the International Yoga Day 2025 celebrations, with active support from the Department of Ayush, Government of Andhra Pradesh.</p>
       <h5 class="modal-subhead">Highlights of the AI-Based Yoga Application</h5>
@@ -84,6 +85,7 @@ const products = [
         <li>Recognized as a symbol of technological integration with traditional wellness, aligning with the 2025 theme: &ldquo;Yoga for One Earth, One Health&rdquo;.</li>
       </ul>
       <p>This achievement reflects Trigun&rsquo;s broader mission to fuse symbolic heritage with modern innovation, delivering solutions that are both culturally resonant and technologically advanced.</p>
+    
     `,
     image: "assets/products/ai-yoga.png",
     video: null,
@@ -93,6 +95,7 @@ const products = [
     category: "Defense",
     description: "Military-grade protection against unauthorized UAVs with 360° radar coverage.",
     detail: `
+
       <h4 class="modal-detail-title">Anti Drone System</h4>
       <p>Trigun Robotic Systems Private Limited has engineered a cutting-edge Anti-Drone System at IIITDM Kurnool, recognized as one of the most advanced Electronic Warfare (EW) platforms of its kind developed indigenously in India. This in-house product exemplifies Trigun&rsquo;s commitment to national security, institutional innovation, and technological sovereignty.</p>
       <h5 class="modal-subhead">Anti-Drone System: A Benchmark in Electronic Warfare</h5>
@@ -115,6 +118,7 @@ const products = [
         <li>Deliver multi-domain security platforms that integrate robotics, AI, and real-time analytics.</li>
         <li>Support institutional reform and national resilience through technology-driven governance.</li>
       </ul>
+    
     `,
     image: "assets/products/anti-drone.png",
     video: null,
@@ -124,6 +128,7 @@ const products = [
     category: "Navigation",
     description: "AR-enhanced navigation with centimeter-accurate positioning for healthcare, industrial, and retail.",
     detail: `
+
       <h4 class="modal-detail-title">Indoor Navigation</h4>
       <p>Trigun Robotic Systems Private Limited has developed a pioneering Indoor Navigation technology that fuses Radio Frequency (RF) and Augmented Reality (AR) to deliver precise, immersive, and user-friendly navigation within enclosed environments.</p>
       <h5 class="modal-subhead">Key Features of Trigun&rsquo;s Indoor Navigation System</h5>
@@ -150,6 +155,7 @@ const products = [
         <li><strong>Smart Museums &amp; Exhibitions:</strong> Offers immersive tours with AR-enhanced storytelling and spatial awareness.</li>
       </ul>
       <p>This technology reflects Trigun&rsquo;s signature approach: blending symbolic design, procedural integrity, and technical excellence to solve real-world challenges.</p>
+    
     `,
     image: "assets/products/ar-indoor-nav.png",
     video: null,
@@ -159,6 +165,7 @@ const products = [
     category: "Drones",
     description: "Advanced underwater vehicle for infrastructure inspection, environmental monitoring, and search & rescue.",
     detail: `
+
       <h4 class="modal-detail-title">Product: Underwater Drone Technology Services</h4>
       <p>Trigun Robotic Systems Private Limited has established a strong track record in the development and deployment of Underwater Drone applications, leveraging advanced robotics, IoT integration, and real-time data systems to address critical challenges in aquatic environments.</p>
       <p>Underwater drones&mdash;whether remotely operated vehicles (ROVs), autonomous underwater vehicles (AUVs), or hybrids&mdash;are transforming how we explore, monitor, and interact with aquatic environments. Here&rsquo;s a breakdown of their most impactful applications:</p>
@@ -183,6 +190,7 @@ const products = [
         <li>Enabled plastic waste collection and pollution control in oceans and freshwater bodies, reducing manual labor and operational costs.</li>
       </ul>
       <p>Trigun&rsquo;s underwater drone systems reflect its broader mission: to fuse symbolic design, technical precision, and procedural integrity in service of real-world impact.</p>
+    
     `,
     image: "assets/products/underwater-drone.png",
     video: null,
@@ -192,6 +200,7 @@ const products = [
     category: "Agriculture",
     description: "AI-enabled drones for crop monitoring, smart spraying, and soil analysis.",
     detail: `
+
       <h4 class="modal-detail-title">Agriculture Drone Service</h4>
       <p>Trigun Robotic Systems Private Limited has established deep expertise in the domain of agriculture drones, offering end-to-end capabilities in design, development, deployment, and Drone-as-a-Service (DaaS). Their work reflects a fusion of technical precision, field-tested reliability, and a commitment to transforming Indian agri-tech through scalable aerial solutions.</p>
       <h5 class="modal-subhead">Core Competencies in Agricultural Drone Technology</h5>
@@ -214,6 +223,7 @@ const products = [
         <li>Support for sustainable farming practices and climate-resilient agriculture.</li>
       </ul>
       <p>Trigun&rsquo;s approach goes beyond hardware&mdash;it&rsquo;s about delivering symbolically rich, procedurally sound solutions that empower rural communities and institutional stakeholders alike.</p>
+    
     `,
     image: "assets/products/agri-drone.png",
     video: null,
@@ -223,6 +233,7 @@ const products = [
     category: "Fitness",
     description: "Personalized workout plans and real-time form correction using AI vision.",
     detail: `
+
       <h4 class="modal-detail-title">AI-Based Gym Trainer: Intelligent Pose Guidance</h4>
       <p>The AI-Based Gym Trainer is an advanced fitness solution that uses computer vision, machine learning, and real-time feedback to help users perform exercises with perfect form. By leveraging pose estimation algorithms (like MediaPipe or OpenPose), this system analyzes joint positions, body alignment, and movement to ensure safe and effective workouts.</p>
       <h5 class="modal-subhead">Core Features</h5>
@@ -334,6 +345,7 @@ const products = [
         <li>The app should be used as a supportive fitness tool and not as a certified medical or rehabilitation device.</li>
       </ul>
       <p>By using this application, users acknowledge and accept that they are engaging in exercise activities at their own risk.</p>
+    
     `,
     image: "assets/products/ai-gym.png",
     video: null,
@@ -343,6 +355,7 @@ const products = [
     category: "Drones",
     description: "Autonomous drones for urban management, emergency response, and medical logistics.",
     detail: `
+
       <h4 class="modal-detail-title">Smart City Applications Using IoT and Drones</h4>
       <p>Trigun Robotic Systems Private Limited has been actively advancing Smart City applications by integrating cutting-edge technologies like IoT, drones, AI, and automation to address urban challenges with precision and scalability. Their work reflects a commitment to creating data-driven, responsive, and inclusive urban ecosystems.</p>
       <h5 class="modal-subhead">1. Traffic Monitoring &amp; Management</h5>
@@ -394,6 +407,7 @@ const products = [
         <li>Enhances situational awareness and rapid response capabilities.</li>
       </ul>
       <p>Trigun&rsquo;s approach is not just technical&mdash;it&rsquo;s deeply symbolic and reformative, aligning with its broader mission to fuse Indian heritage with modern innovation, and to promote equity, transparency, and institutional excellence.</p>
+    
     `,
     image: "assets/products/smart-city-drones.png",
     video: null,
@@ -403,6 +417,7 @@ const products = [
     category: "Navigation",
     description: "Remotely Operated Vehicle with GNSS-denied navigation for industrial, scientific, and defense applications.",
     detail: `
+
       <h4 class="modal-detail-title">Product: Agriculture RoV</h4>
       <p>Trigun Robotic Systems Private Limited has developed an innovative Remotely Operated Vehicle (RoV) for agricultural applications, designed to operate with steering-based control and visual navigation capabilities. This in-house solution reflects Trigun&rsquo;s commitment to precision farming, sustainability, and indigenous agri-tech innovation.</p>
       <h5 class="modal-subhead">Key Features of Trigun&rsquo;s Agricultural RoV</h5>
@@ -426,6 +441,7 @@ const products = [
         <li>Pest and weed detection through AI-enhanced image analysis.</li>
       </ul>
       <p>This RoV platform is a strategic step toward autonomous field robotics, aligning with Trigun&rsquo;s long-term vision of symbolically rich, technically rigorous agri-tech systems.</p>
+    
     `,
     image: "assets/products/rov-system.png",
     video: null,
@@ -435,6 +451,7 @@ const products = [
     category: "Healthcare",
     description: "Enhancing medical diagnostics and procedural guidance with AR Doctor applications.",
     detail: `
+
       <h4 class="modal-detail-title">Augmented Reality (AR) in Healthcare</h4>
       <p>Trigun Robotic Systems Private Limited has pioneered the development of AR Doctor applications, integrating augmented reality into medical diagnostics and procedural guidance. These innovations aim to enhance clinical precision, reduce diagnostic latency, and democratize access to expert-level care.</p>
       <h5 class="modal-subhead">Key Features of AR Doctor Applications</h5>
@@ -489,6 +506,7 @@ const products = [
         <li>Helps clinicians interpret complex cases with greater accuracy.</li>
         <li>Reduces diagnostic delays and improves treatment planning.</li>
       </ul>
+    
     `,
     image: "assets/products/ar-healthcare.png",
     video: null,
@@ -498,6 +516,7 @@ const products = [
     category: "IoT",
     description: "Visionary IoT solutions for Healthcare, Agriculture, Academics, and Industry.",
     detail: `
+
       <h4 class="modal-detail-title">IoT Applications</h4>
       <p>Trigun Robotic Systems Private Limited has emerged as a visionary force in the development of IoT applications across four critical sectors: Healthcare, Agriculture, Academics, and Industry. By fusing real-time data acquisition, intelligent automation, and scalable cloud integration, Trigun is reshaping how institutions and communities interact with technology.</p>
       <h5 class="modal-subhead">IoT in Academics</h5>
@@ -537,6 +556,7 @@ const products = [
         <li><strong>Supply Chain &amp; Traceability:</strong> IoT ensures food safety and reduces post-harvest losses.</li>
       </ul>
       <p>Trigun&rsquo;s approach is not just technical&mdash;it&rsquo;s deeply symbolic and reformative. Each application reflects a commitment to equity, transparency, and innovation, aligning with the company&rsquo;s broader mission to lead in Indian agri-tech and institutional transformation.</p>
+    
     `,
     image: "assets/products/iot-applications.png",
     video: null,
@@ -546,6 +566,7 @@ const products = [
     category: "Maintenance",
     description: "Augmented Reality solutions for guided aircraft inspection, repair, and training, enhancing efficiency and safety.",
     detail: `
+
       <h4 class="modal-detail-title">Augmented Reality-based Aircraft Maintenance System</h4>
       <p>The product presents an Augmented Reality (AR)&ndash;based maintenance system for an Aircraft and a Helicopter, illustrating how AR can revolutionize defense and aviation maintenance through interactive visualization, remote assistance, and immersive training.</p>
       <h5 class="modal-subhead">Motivation and Objectives</h5>
@@ -598,6 +619,7 @@ const products = [
         <li>Expanding to multiple aircraft platforms with IoT-based condition monitoring.</li>
         <li>Enabling voice-command operation and live data visualization.</li>
       </ul>
+    
     `,
     image: "assets/products/ar-aircraft-maintenance.png",
     video: null,
@@ -607,6 +629,7 @@ const products = [
     category: "IoT",
     description: "Intelligent multi-camera AI surveillance platform for real-time detection, recognition, and analytics.",
     detail: `
+
       <h4 class="modal-detail-title">Eagle Eye AI Surveillance System</h4>
       <p>Eagle Eye AI Surveillance System is an intelligent multi-camera monitoring platform that uses Artificial Intelligence and Computer Vision for real-time people detection, vehicle detection, face recognition, and occupancy analytics. The system provides centralized monitoring through a web dashboard with live video streaming, analytics, and person log management. It enhances security by automating surveillance operations and reducing manual effort.</p>
       <h5 class="modal-subhead">Motivation</h5>
@@ -625,6 +648,7 @@ const products = [
       <p>The project achieved intelligent surveillance automation with accurate object detection and recognition. It provides centralized monitoring, real-time analytics, occupancy estimation, and secure data management. The system demonstrates scalability, reduced manual supervision, and practical applicability in institutions, industries, and smart city environments.</p>
       <h5 class="modal-subhead">Conclusion</h5>
       <p>Eagle Eye AI Surveillance System effectively integrates Artificial Intelligence, Computer Vision, and Web technologies to create an advanced security monitoring platform. The system improves operational efficiency, enhances safety, and provides actionable insights through automated analytics. It offers a scalable and cost-effective solution for modern intelligent surveillance applications.</p>
+    
     `,
     image: "assets/products/eagle-eye.png",
     video: null,
@@ -634,6 +658,7 @@ const products = [
     category: "IoT",
     description: "End-to-end encrypted messenger with zero server-side storage, voice/video calling, and full data privacy by design.",
     detail: `
+
       <h4 class="modal-detail-title">Current &mdash; Private. Secure. Yours.</h4>
       <p>Current is a privacy-first messaging application built by Trigun Robotic Systems, designed around a simple but uncompromising principle: your conversations belong to you, and no one else &mdash; not even us.</p>
       <p>Unlike conventional messaging platforms, Current never stores message content on its servers, not even in encrypted form, not even temporarily. Chat and call history exist only on each user&rsquo;s own device, protected by on-device encryption.</p>
@@ -657,6 +682,7 @@ const products = [
           </ul>
         </li>
       </ul>
+    
     `,
     image: "assets/products/current-messenger.png",
     video: null,
@@ -665,8 +691,8 @@ const products = [
     title: "Meghadut",
     category: "Drones",
     description: "AI-driven drone booking platform for on-demand aerial delivery, real-time fleet tracking, and automated mission control.",
-    website: "https://meghadut.com/",
     detail: `
+
       <h4 class="modal-detail-title">Meghadut: Autonomous Drone Booking &amp; Delivery Platform</h4>
       <p>In the modern logistics and emergency response landscape, efficiency, speed, and real-time coordination are paramount. Traditional delivery networks and ground-based logistics often face insurmountable challenges&mdash;from traffic congestion in urban centers to infrastructure gaps in rural and remote regions&mdash;resulting in delayed critical deliveries and inefficient resource utilization.</p>
       <p>To solve this, MEGHADUT has developed a state-of-the-art AI-driven drone booking platform. Integrating an intelligent mission engine, real-time spatial awareness, and a robust pilot ecosystem, Meghadut bridges the gap between those who need rapid aerial transport and the certified drone fleet ready to serve them. This innovation transforms how we approach aerial logistics, smart delivery, and automated flight execution.</p>
@@ -699,16 +725,18 @@ const products = [
         <li>Protects every flight with rigorous path traversal checks, JWT-based role authorization, and hardware-level authentication keys.</li>
         <li>Validates pilot ownership and mission states to ensure only authorized operators can launch or alter flight paths.</li>
       </ul>
+    
     `,
     image: "assets/products/meghadut-drone.png",
     video: null,
+    website: "https://meghadut.com/",
   },
   {
     title: "Mahik-Fitness",
     category: "Fitness",
     description: "AI-powered fitness platform delivering real-time pose correction, rep tracking, and multilingual coaching across 30+ exercises.",
-    website: "https://mahikfit-trigun.com/mahik.html",
     detail: `
+
       <h4 class="modal-detail-title">Mahik Fitness: Intelligent Pose Guidance</h4>
       <p>The AI-Based Gym Trainer is an advanced fitness solution that uses computer vision, machine learning, and real-time feedback to help users perform exercises with perfect form. By leveraging pose estimation algorithms (like MediaPipe or OpenPose), this system analyzes joint positions, body alignment, and movement to ensure safe and effective workouts.</p>
       <h5 class="modal-subhead">Core Features</h5>
@@ -771,16 +799,18 @@ const products = [
       <h5 class="modal-subhead">Disclaimer</h5>
       <p>The AI-Based Gym Trainer application is intended for informational and fitness guidance purposes only. While it uses advanced computer vision and AI algorithms to provide pose correction, performance analysis, and exercise suggestions, it is not a substitute for professional medical or fitness advice.</p>
       <p>Users are advised to consult a certified fitness trainer or healthcare provider before beginning any exercise program, especially if they have prior injuries or medical conditions. The app provides guidance based on camera-based pose detection, which may be subject to environmental factors (lighting, camera placement, clothing) and therefore should not be relied on as the sole source of exercise safety. Trigun Robotic Systems Pvt. Ltd. and its affiliates are not responsible for injuries, accidents, or health issues arising from misuse of the application or incorrect implementation of exercise instructions. The app should be used as a supportive fitness tool and not as a certified medical or rehabilitation device. By using this application, users acknowledge and accept that they are engaging in exercise activities at their own risk.</p>
+    
     `,
     image: "assets/products/Mahik-fitness.png",
     video: null,
+    website: "https://mahikfit-trigun.com/mahik.html",
   },
   {
     title: "Samik – AI Yoga Trainer",
     category: "Wellness",
     description: "AI-powered yoga trainer that detects your pose live and provides real-time voice-guided corrections.",
-    website: "https://samik-trigun.com/",
     detail: `
+
       <h4 class="modal-detail-title">Samik &ndash; AI Yoga Trainer</h4>
       <p>A Product of Trigun Robotic Systems Private Limited, Kurnool.</p>
       <p>Samik helps you practice yoga correctly at home by watching your pose through the camera, checking your accuracy in real time, and guiding you with voice feedback &mdash; just like a personal yoga instructor.</p>
@@ -791,9 +821,11 @@ const products = [
         <li>Gives spoken voice guidance and corrections.</li>
         <li>Tracks your sessions, attendance, and performance over time.</li>
       </ul>
+    
     `,
     image: "assets/products/Samik.png",
     video: null,
+    website: "https://samik-trigun.com/",
   },
 ];
 
