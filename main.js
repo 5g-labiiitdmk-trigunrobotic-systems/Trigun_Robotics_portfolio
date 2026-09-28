@@ -37,6 +37,7 @@ const products = [
     category: "Drones",
     description: "Smart drones for healthcare management, emergency response, and medical logistics.",
     detail: `
+
       <h4 class="modal-detail-title">Smart Health Drones</h4>
       <p>In emergency healthcare, the “golden hour” is a critical window where timely intervention can drastically reduce mortality and long-term complications. However, in rural and underserved regions, systemic delays—such as limited ambulance access, shortage of medical personnel, and lack of real-time coordination—continue to hinder effective response.</p>
       <p>To address these challenges, Trigun Robotic Systems Private Limited, incubated at IIITDM Kurnool, has developed a drone-based emergency medical support system that integrates ambulance patrolling, public announcement, and telemedicine capabilities into a unified aerial platform. This innovation is designed to bridge healthcare gaps, enhance public communication, and support civic infrastructure in both urban and rural settings.</p>
@@ -57,6 +58,7 @@ const products = [
       <li>Integrates with local governance systems for data-driven emergency response.</li>
       </ul></li>
       </ul>
+    
     `,
     image: "assets/products/smart-health-drones.png",
     video: null,
@@ -68,6 +70,7 @@ const products = [
     category: "Wellness",
     description: "Real-time posture correction and personalized routines for yoga practice.",
     detail: `
+
 
 
       <h4 class="modal-detail-title">AI Based Yoga Application</h4>
@@ -88,6 +91,7 @@ const products = [
       <p>This achievement reflects Trigun&rsquo;s broader mission to fuse symbolic heritage with modern innovation, delivering solutions that are both culturally resonant and technologically advanced.</p>
     
     
+    
     `,
     image: "assets/products/ai-yoga.png",
     video: null,
@@ -97,6 +101,7 @@ const products = [
     category: "Defense",
     description: "Military-grade protection against unauthorized UAVs with 360° radar coverage.",
     detail: `
+
 
 
       <h4 class="modal-detail-title">Anti Drone System</h4>
@@ -123,6 +128,7 @@ const products = [
       </ul>
     
     
+    
     `,
     image: "assets/products/anti-drone.png",
     video: null,
@@ -132,6 +138,7 @@ const products = [
     category: "Navigation",
     description: "AR-enhanced navigation with centimeter-accurate positioning for healthcare, industrial, and retail.",
     detail: `
+
 
 
       <h4 class="modal-detail-title">Indoor Navigation</h4>
@@ -162,6 +169,7 @@ const products = [
       <p>This technology reflects Trigun&rsquo;s signature approach: blending symbolic design, procedural integrity, and technical excellence to solve real-world challenges.</p>
     
     
+    
     `,
     image: "assets/products/ar-indoor-nav.png",
     video: null,
@@ -171,6 +179,7 @@ const products = [
     category: "Drones",
     description: "Advanced underwater vehicle for infrastructure inspection, environmental monitoring, and search & rescue.",
     detail: `
+
 
 
       <h4 class="modal-detail-title">Product: Underwater Drone Technology Services</h4>
@@ -199,6 +208,7 @@ const products = [
       <p>Trigun&rsquo;s underwater drone systems reflect its broader mission: to fuse symbolic design, technical precision, and procedural integrity in service of real-world impact.</p>
     
     
+    
     `,
     image: "assets/products/underwater-drone.png",
     video: null,
@@ -208,6 +218,7 @@ const products = [
     category: "Agriculture",
     description: "AI-enabled drones for crop monitoring, smart spraying, and soil analysis.",
     detail: `
+
 
 
       <h4 class="modal-detail-title">Agriculture Drone Service</h4>
@@ -234,6 +245,7 @@ const products = [
       <p>Trigun&rsquo;s approach goes beyond hardware&mdash;it&rsquo;s about delivering symbolically rich, procedurally sound solutions that empower rural communities and institutional stakeholders alike.</p>
     
     
+    
     `,
     image: "assets/products/agri-drone.png",
     video: null,
@@ -243,6 +255,7 @@ const products = [
     category: "Fitness",
     description: "Personalized workout plans and real-time form correction using AI vision.",
     detail: `
+
 
 
       <h4 class="modal-detail-title">AI-Based Gym Trainer: Intelligent Pose Guidance</h4>
@@ -358,6 +371,7 @@ const products = [
       <p>By using this application, users acknowledge and accept that they are engaging in exercise activities at their own risk.</p>
     
     
+    
     `,
     image: "assets/products/ai-gym.png",
     video: null,
@@ -367,6 +381,7 @@ const products = [
     category: "Drones",
     description: "Autonomous drones for urban management, emergency response, and medical logistics.",
     detail: `
+
 
 
       <h4 class="modal-detail-title">Smart City Applications Using IoT and Drones</h4>
@@ -422,6 +437,7 @@ const products = [
       <p>Trigun&rsquo;s approach is not just technical&mdash;it&rsquo;s deeply symbolic and reformative, aligning with its broader mission to fuse Indian heritage with modern innovation, and to promote equity, transparency, and institutional excellence.</p>
     
     
+    
     `,
     image: "assets/products/smart-city-drones.png",
     video: null,
@@ -431,6 +447,7 @@ const products = [
     category: "Navigation",
     description: "Remotely Operated Vehicle with GNSS-denied navigation for industrial, scientific, and defense applications.",
     detail: `
+
 
 
       <h4 class="modal-detail-title">Product: Agriculture RoV</h4>
@@ -458,6 +475,7 @@ const products = [
       <p>This RoV platform is a strategic step toward autonomous field robotics, aligning with Trigun&rsquo;s long-term vision of symbolically rich, technically rigorous agri-tech systems.</p>
     
     
+    
     `,
     image: "assets/products/rov-system.png",
     video: null,
@@ -467,6 +485,7 @@ const products = [
     category: "Healthcare",
     description: "Enhancing medical diagnostics and procedural guidance with AR Doctor applications.",
     detail: `
+
 
 
       <h4 class="modal-detail-title">Augmented Reality (AR) in Healthcare</h4>
@@ -525,6 +544,7 @@ const products = [
       </ul>
     
     
+    
     `,
     image: "assets/products/ar-healthcare.png",
     video: null,
@@ -534,6 +554,7 @@ const products = [
     category: "IoT",
     description: "Visionary IoT solutions for Healthcare, Agriculture, Academics, and Industry.",
     detail: `
+
 
 
       <h4 class="modal-detail-title">IoT Applications</h4>
@@ -577,6 +598,7 @@ const products = [
       <p>Trigun&rsquo;s approach is not just technical&mdash;it&rsquo;s deeply symbolic and reformative. Each application reflects a commitment to equity, transparency, and innovation, aligning with the company&rsquo;s broader mission to lead in Indian agri-tech and institutional transformation.</p>
     
     
+    
     `,
     image: "assets/products/iot-applications.png",
     video: null,
@@ -586,6 +608,7 @@ const products = [
     category: "Maintenance",
     description: "Augmented Reality solutions for guided aircraft inspection, repair, and training, enhancing efficiency and safety.",
     detail: `
+
 
 
       <h4 class="modal-detail-title">Augmented Reality-based Aircraft Maintenance System</h4>
@@ -642,6 +665,7 @@ const products = [
       </ul>
     
     
+    
     `,
     image: "assets/products/ar-aircraft-maintenance.png",
     video: null,
@@ -651,6 +675,7 @@ const products = [
     category: "IoT",
     description: "Intelligent multi-camera AI surveillance platform for real-time detection, recognition, and analytics.",
     detail: `
+
 
 
       <h4 class="modal-detail-title">Eagle Eye AI Surveillance System</h4>
@@ -673,6 +698,7 @@ const products = [
       <p>Eagle Eye AI Surveillance System effectively integrates Artificial Intelligence, Computer Vision, and Web technologies to create an advanced security monitoring platform. The system improves operational efficiency, enhances safety, and provides actionable insights through automated analytics. It offers a scalable and cost-effective solution for modern intelligent surveillance applications.</p>
     
     
+    
     `,
     image: "assets/products/eagle-eye.png",
     video: null,
@@ -682,6 +708,7 @@ const products = [
     category: "IoT",
     description: "End-to-end encrypted messenger with zero server-side storage, voice/video calling, and full data privacy by design.",
     detail: `
+
 
 
       <h4 class="modal-detail-title">Current &mdash; Private. Secure. Yours.</h4>
@@ -709,6 +736,7 @@ const products = [
       </ul>
     
     
+    
     `,
     image: "assets/products/current-messenger.png",
     video: null,
@@ -718,6 +746,7 @@ const products = [
     category: "Drones",
     description: "AI-driven drone booking platform for on-demand aerial delivery, real-time fleet tracking, and automated mission control.",
     detail: `
+
 
 
       <h4 class="modal-detail-title">Meghadut: Autonomous Drone Booking &amp; Delivery Platform</h4>
@@ -754,6 +783,7 @@ const products = [
       </ul>
     
     
+    
     `,
     image: "assets/products/meghadut-drone.png",
     video: null,
@@ -764,6 +794,7 @@ const products = [
     category: "Fitness",
     description: "AI-powered fitness platform delivering real-time pose correction, rep tracking, and multilingual coaching across 30+ exercises.",
     detail: `
+
 
 
       <h4 class="modal-detail-title">Mahik Fitness: Intelligent Pose Guidance</h4>
@@ -830,6 +861,7 @@ const products = [
       <p>Users are advised to consult a certified fitness trainer or healthcare provider before beginning any exercise program, especially if they have prior injuries or medical conditions. The app provides guidance based on camera-based pose detection, which may be subject to environmental factors (lighting, camera placement, clothing) and therefore should not be relied on as the sole source of exercise safety. Trigun Robotic Systems Pvt. Ltd. and its affiliates are not responsible for injuries, accidents, or health issues arising from misuse of the application or incorrect implementation of exercise instructions. The app should be used as a supportive fitness tool and not as a certified medical or rehabilitation device. By using this application, users acknowledge and accept that they are engaging in exercise activities at their own risk.</p>
     
     
+    
     `,
     image: "assets/products/Mahik-fitness.png",
     video: null,
@@ -840,6 +872,7 @@ const products = [
     category: "Wellness",
     description: "AI-powered yoga trainer that detects your pose live and provides real-time voice-guided corrections.",
     detail: `
+
 
 
       <h4 class="modal-detail-title">Samik &ndash; AI Yoga Trainer</h4>
@@ -854,10 +887,47 @@ const products = [
       </ul>
     
     
+    
     `,
     image: "assets/products/Samik.png",
     video: null,
     website: "https://samik-trigun.com/",
+  },
+  {
+    title: "Campus Bus — Live GPS Transit Tracker",
+    category: "Navigation",
+    description: "Real-time campus bus tracking with live GPS locations, routes, stops, speeds, and timetable updates for IIITDM Kurnool.",
+    detail: `
+      <h4 class="modal-detail-title">Campus Bus — Live GPS Transit Tracker</h4>
+      <h5 class="modal-subhead">Campus Bus — Live Real-Time GPS Transit Tracker</h5>
+      <p>A responsive web platform for <strong>IIITDM Kurnool</strong> that provides students and staff with live campus bus locations without requiring authentication.</p>
+      <p><strong>Key Features</strong></p>
+      <ul>
+      <li><strong>Live GPS Tracking</strong> — View real-time bus locations, speed, and direction.</li>
+      <li><strong>Interactive Map</strong> — Track buses using a live map with vehicle markers and route information.</li>
+      <li><strong>Route Stops &amp; Timetable</strong> — View scheduled stops and live ETA/countdown information.</li>
+      <li><strong>Multiple Bus Support</strong> — Monitor multiple campus buses from a single interface.</li>
+      <li><strong>Hardware GPS Powered</strong> — Integrates with onboard GPS trackers such as Onelap Micro GPS.</li>
+      <li><strong>Real-Time Updates</strong> — Uses Socket.IO to broadcast vehicle telemetry instantly.</li>
+      <li><strong>Bus Status</strong> — Displays LIVE, STALE, and OFFLINE vehicle states.</li>
+      <li><strong>No Authentication Required</strong> — Students and staff can access the tracking map instantly.</li>
+      <li><strong>GPS Telemetry</strong> — Captures coordinates, speed, heading, satellite count, and GPS accuracy.</li>
+      <li><strong>Testing Simulator</strong> — Includes simulated GPS movement for development and testing.</li>
+      </ul>
+      <h5 class="modal-subhead">System Architecture</h5>
+      <ul>
+      <li>GPS Tracker / Telemetry</li>
+      <li>Node.js + Express Backend</li>
+      <li>Socket.IO Real-Time Broadcasting</li>
+      <li>Leaflet + OpenStreetMap Live Map</li>
+      <li>Onelap Micro GPS Integration</li>
+      </ul>
+      <p>Designed to provide a simple and accessible real-time transportation experience for the IIITDM Kurnool campus.</p>
+    `,
+    image: "assets/products/campus-bus-live-gps-transit-tracker-1790597216725.png",
+    video: null,
+    website: "https://iiitdmkurnool-bus-application.onrender.com",
+    buttonLabel: "Experience",
   },
 ];
 
