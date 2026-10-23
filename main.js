@@ -74,6 +74,7 @@ const products = [
 
 
 
+
       <h4 class="modal-detail-title">AI Based Yoga Application</h4>
       <p>Trigun Robotic Systems Private Limited has successfully developed an AI-based Yoga Application, which was prominently featured during the International Yoga Day 2025 celebrations, with active support from the Department of Ayush, Government of Andhra Pradesh.</p>
       <h5 class="modal-subhead">Highlights of the AI-Based Yoga Application</h5>
@@ -96,6 +97,7 @@ const products = [
     
     
     
+    
     `,
     image: "assets/products/ai-yoga.png",
     video: null,
@@ -105,6 +107,7 @@ const products = [
     category: "Defense",
     description: "Military-grade protection against unauthorized UAVs with 360° radar coverage.",
     detail: `
+
 
 
 
@@ -139,6 +142,7 @@ const products = [
     
     
     
+    
     `,
     image: "assets/products/anti-drone.png",
     video: null,
@@ -148,6 +152,7 @@ const products = [
     category: "Navigation",
     description: "AR-enhanced navigation with centimeter-accurate positioning for healthcare, industrial, and retail.",
     detail: `
+
 
 
 
@@ -186,6 +191,7 @@ const products = [
     
     
     
+    
     `,
     image: "assets/products/ar-indoor-nav.png",
     video: null,
@@ -195,6 +201,7 @@ const products = [
     category: "Drones",
     description: "Advanced underwater vehicle for infrastructure inspection, environmental monitoring, and search & rescue.",
     detail: `
+
 
 
 
@@ -231,6 +238,7 @@ const products = [
     
     
     
+    
     `,
     image: "assets/products/underwater-drone.png",
     video: null,
@@ -240,6 +248,7 @@ const products = [
     category: "Agriculture",
     description: "AI-enabled drones for crop monitoring, smart spraying, and soil analysis.",
     detail: `
+
 
 
 
@@ -274,6 +283,7 @@ const products = [
     
     
     
+    
     `,
     image: "assets/products/agri-drone.png",
     video: null,
@@ -283,6 +293,7 @@ const products = [
     category: "Fitness",
     description: "Personalized workout plans and real-time form correction using AI vision.",
     detail: `
+
 
 
 
@@ -406,6 +417,7 @@ const products = [
     
     
     
+    
     `,
     image: "assets/products/ai-gym.png",
     video: null,
@@ -415,6 +427,7 @@ const products = [
     category: "Drones",
     description: "Autonomous drones for urban management, emergency response, and medical logistics.",
     detail: `
+
 
 
 
@@ -478,6 +491,7 @@ const products = [
     
     
     
+    
     `,
     image: "assets/products/smart-city-drones.png",
     video: null,
@@ -487,6 +501,7 @@ const products = [
     category: "Navigation",
     description: "Remotely Operated Vehicle with GNSS-denied navigation for industrial, scientific, and defense applications.",
     detail: `
+
 
 
 
@@ -522,6 +537,7 @@ const products = [
     
     
     
+    
     `,
     image: "assets/products/rov-system.png",
     video: null,
@@ -531,6 +547,7 @@ const products = [
     category: "Healthcare",
     description: "Enhancing medical diagnostics and procedural guidance with AR Doctor applications.",
     detail: `
+
 
 
 
@@ -597,6 +614,7 @@ const products = [
     
     
     
+    
     `,
     image: "assets/products/ar-healthcare.png",
     video: null,
@@ -606,6 +624,7 @@ const products = [
     category: "IoT",
     description: "Visionary IoT solutions for Healthcare, Agriculture, Academics, and Industry.",
     detail: `
+
 
 
 
@@ -657,6 +676,7 @@ const products = [
     
     
     
+    
     `,
     image: "assets/products/iot-applications.png",
     video: null,
@@ -666,6 +686,7 @@ const products = [
     category: "Maintenance",
     description: "Augmented Reality solutions for guided aircraft inspection, repair, and training, enhancing efficiency and safety.",
     detail: `
+
 
 
 
@@ -730,6 +751,7 @@ const products = [
     
     
     
+    
     `,
     image: "assets/products/ar-aircraft-maintenance.png",
     video: null,
@@ -739,6 +761,7 @@ const products = [
     category: "IoT",
     description: "Intelligent multi-camera AI surveillance platform for real-time detection, recognition, and analytics.",
     detail: `
+
 
 
 
@@ -769,6 +792,7 @@ const products = [
     
     
     
+    
     `,
     image: "assets/products/eagle-eye.png",
     video: null,
@@ -778,6 +802,7 @@ const products = [
     category: "Defense",
     description: "End-to-end encrypted messenger with zero server-side storage, voice/video calling, and full data privacy by design.",
     detail: `
+
 
 
       <h4 class="modal-detail-title">Current — Secure Messenger</h4>
@@ -799,6 +824,7 @@ const products = [
       </ul>
     
     
+    
     `,
     image: "assets/products/current-messenger.png",
     video: null,
@@ -808,6 +834,7 @@ const products = [
     category: "Drones",
     description: "AI-driven drone booking platform for on-demand aerial delivery, real-time fleet tracking, and automated mission control.",
     detail: `
+
 
 
 
@@ -852,6 +879,7 @@ const products = [
     
     
     
+    
     `,
     image: "assets/products/meghadut-drone.png",
     video: null,
@@ -862,6 +890,7 @@ const products = [
     category: "Fitness",
     description: "AI-powered fitness platform delivering real-time pose correction, rep tracking, and multilingual coaching across 30+ exercises.",
     detail: `
+
 
 
 
@@ -936,6 +965,7 @@ const products = [
     
     
     
+    
     `,
     image: "assets/products/Mahik-fitness.png",
     video: null,
@@ -946,6 +976,7 @@ const products = [
     category: "Wellness",
     description: "AI-powered yoga trainer that detects your pose live and provides real-time voice-guided corrections.",
     detail: `
+
 
 
 
@@ -968,6 +999,7 @@ const products = [
     
     
     
+    
     `,
     image: "assets/products/Samik.png",
     video: null,
@@ -978,6 +1010,7 @@ const products = [
     category: "Navigation",
     description: "Real-time campus bus tracking with live GPS locations, routes, stops, speeds, and timetable updates for IIITDM Kurnool.",
     detail: `
+
 
       <h4 class="modal-detail-title">Campus Bus — Live GPS Transit Tracker</h4>
       <h5 class="modal-subhead">Campus Bus — Live Real-Time GPS Transit Tracker</h5>
@@ -1004,6 +1037,7 @@ const products = [
       <li>Onelap Micro GPS Integration</li>
       </ul>
       <p>Designed to provide a simple and accessible real-time transportation experience for the IIITDM Kurnool campus.</p>
+    
     
     `,
     image: "assets/products/campus-bus-live-gps-transit-tracker-1790597216725.png",
